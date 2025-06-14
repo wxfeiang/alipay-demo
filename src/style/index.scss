@@ -1,0 +1,364 @@
+// @import './iconfont.css';
+:root,
+page {
+  font-family:
+    'San Francisco', Rotobo, arial, 'PingFang SC', 'Noto SansCJK', 'Microsoft Yahei', sans-serif;
+
+  // 修改按主题色
+  // --wot-color-theme: #37c2bc;
+
+  // 修改按钮背景色
+  // --wot-button-primary-bg-color: green;
+
+  // 统一固定导航栏背景色
+  --color-nav-bg: #4689fd !important;
+  //统一固定导航栏字体颜色
+  --color-nav-text: #fff !important;
+  //
+  --btn-round: 6px;
+  // info
+  --dy-innfo-color: #2d69ef;
+  // infobg
+  --dy-info-bg: #eff4ff;
+  //dy-info-border:
+  --dy-info-border: 1px solid #c7d9ff;
+  --dy-error-color: #f44d24;
+  --dy-error-bg: #ffe7e1;
+  --dy-error-border: 1px solid #ffe7e1;
+}
+
+// .test {
+//   // 可以通过 @apply 多个样式封装整体样式
+//   @apply mt-4 ml-4;
+//   padding-top: 4px;
+//   color: red;
+// }
+.custom-class-mine-login {
+  color: #fff !important;
+  background: linear-gradient(90deg, #72c2fe 0%, #4055fe 100%) !important;
+  border: none !important;
+  border-radius: var(--btn-round) !important;
+}
+.custom-class-mine-error {
+  color: #fff !important;
+  background: #f44d24 !important;
+  border: none !important;
+  border-radius: var(--btn-round) !important;
+}
+
+:deep(.custom-class-mine-error) {
+  color: #fff !important;
+  background: #f44d24 !important;
+  border: none !important;
+  border-radius: var(--btn-round) !important;
+}
+
+.dy-tab-full-hight {
+  height: calc(100vh - var(--window-bottom));
+}
+
+.custom-class-mine-dyplain {
+  border-radius: var(--btn-round) !important;
+  @apply overflow-hidden!;
+}
+
+.custom-class-mine-dyinfo {
+  color: var(--dy-info-color) !important;
+  background: var(--dy-info-bg) !important;
+  border: var(--dy-info-border) !important;
+  border-radius: var(--btn-round) !important;
+}
+
+.custom-class-error-dyplain {
+  color: var(--dy-error-color) !important;
+  background: var(--dy-error-bg) !important;
+  border: var(--dy-error-border) !important;
+  border-radius: var(--btn-round) !important;
+}
+
+.dy-bottom-tabbar {
+  bottom: calc(var(--window-bottom) + 5px) !important;
+}
+.nav_show {
+  @apply bg-transparent!;
+}
+.bgCard {
+  @apply bg-#C5DEFE!;
+}
+.nav_bg {
+  color: var(--color-nav-text);
+  background-color: var(--color-nav-bg);
+}
+// 统一蓝色导航背景
+.dy-blue-bg {
+  min-height: 100vh !important;
+  background: linear-gradient(180deg, #d6eafe 0%, #f3f4f6 40%, #f2f3f7 100%) !important;
+}
+
+.dy-blue-deep-bg {
+  min-height: 100vh !important;
+  background: linear-gradient(0deg, #f2f3f7 0%, #f2f3f7 50%, #b8d7ff 100%);
+}
+.dy-blue-top-bg {
+  height: 256px !important;
+  background: linear-gradient(0deg, #f2f3f7 0%, #f2f3f7 50%, #b8d7ff 100%);
+}
+
+// 底部插入安全距离
+.safe-area-after::after {
+  height: calc(10px + var(--window-top));
+  height: calc(10px + var(--window-top) - constant(safe-area-inset-bottom));
+  height: calc(10px + var(--window-top) - env(safe-area-inset-bottom));
+  content: '';
+}
+/*⬇️ //绝对定位横向居中 */
+.REcenterX {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*⬇️ //绝对定位竖向居中 */
+.REcenterY {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*⬇️ //绝对定位居中 */
+.REcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.F1 {
+  position: relative;
+  flex: 1;
+}
+/*⬇️ //文字超出1行省略 */
+.over1 {
+  width: 100%;
+  overflow: hidden; //超出隐藏
+  text-overflow: ellipsis; //溢出显示省略号
+  white-space: nowrap; //不折行
+}
+/*⬇️ //文字超出2行省略 */
+.over2 {
+  display: -webkit-box;
+  overflow: hidden;
+
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/*⬇️ //文字超出3行省略 */
+.over3 {
+  display: -webkit-box;
+  overflow: hidden;
+
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+/* 弹性布局上下居中 */
+/*⬇️ //弹性布局上下居中、横向居中 */
+.FHcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*⬇️ //弹性布局上下居中、分散对其 */
+.FHcs,
+.FHsc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*⬇️ //弹性布局上下居中、左对齐 */
+.FHcl,
+.FHlc {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+/*⬇️ //弹性布局上下居中、右对齐 */
+.FHcr,
+.FHrc {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+/* 弹性布局上下居中 */
+/* /////////////////////// */
+/* 弹性布局上居中 */
+/*⬇️ //弹性布局上居中、横向居中 */
+.FHtc,
+.FHct {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+/*⬇️ //弹性布局上居中、分散对其 */
+.FHts,
+.FHst {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+/*⬇️ //弹性布局上居中、左对齐 */
+.FHtl,
+.FHlt {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+/*⬇️ //弹性布局上居中、右对齐 */
+.FHtr,
+.FHrt {
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+}
+/* 弹性布局上居中 */
+/* /////////////////////// */
+/* 弹性布局下居中 */
+/*⬇️ //弹性布局下居中、横向居中 */
+.FHbc,
+.FHcb {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+/*⬇️ //弹性布局上居中、分散对其 */
+.FHbs,
+.FHsb {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+/*⬇️ //弹性布局上居中、左对齐 */
+.FHbl,
+.FHlb {
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+}
+/*⬇️ //弹性布局上居中、右对齐 */
+.FHbr,
+.FHrb {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+/* 弹性布局上居中 */
+/* /////////////////////// */
+/* 弹性布局下居中 */
+/*⬇️ //弹性布局下居中、横向居中 */
+.FScc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*⬇️ //弹性布局上居中、左对齐 */
+.FScl,
+.FSlc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+/*⬇️ //弹性布局上居中、右对齐 */
+.FScr,
+.FSrc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+/* 弹性布局上居中 */
+/* /////////////////////// */
+/* 弹性布局下居中 */
+/*⬇️ //弹性布局下居中、横向居中 */
+.FStc,
+.FSct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+/*⬇️ //弹性布局上居中、左对齐 */
+.FStl,
+.FSlt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+/*⬇️ //弹性布局上居中、右对齐 */
+.FStr,
+.FSrt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+/* 弹性布局上居中 */
+/* /////////////////////// */
+/* 弹性布局下居中 */
+/*⬇️ //弹性布局下居中、横向居中 */
+.FSbc,
+.FScb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+/*⬇️ //弹性布局上居中、左对齐 */
+.FSbl,
+.FSlb {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+/*⬇️ //弹性布局上居中、右对齐 */
+.FSbr,
+.FSrb {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+/* 弹性布局上居中 */
+/* 弹性布局上居中 */
+/* /////////////////////// */
+/* 弹性布局下居中 */
+/*⬇️ //弹性布局下居中、横向居中 */
+.FSsc,
+.FScs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/*⬇️ //弹性布局上居中、左对齐 */
+.FSsl,
+.FSls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+/*⬇️ //弹性布局上居中、右对齐 */
+.FSsr,
+.FSrs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}

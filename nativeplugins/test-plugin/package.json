@@ -1,0 +1,25 @@
+{
+  "name": "数字身份插件",
+  "id": "test-plugin",
+  "version": "1.0.0",
+  "description": "安卓原生插件",
+  "_dp_type": "nativeplugin",
+  "_dp_nativeplugin": {
+    "android": {
+      "plugins": [
+        {
+          "type": "module",
+          "name": "test-plugin",
+          "class": "com.example.xaid_plugin.TestModule"
+        }
+      ],
+      "integrateType": "aar",
+      "parameters": {},
+      "dependencies": [
+        "androidx.appcompat:appcompat: 1.2.0",
+        "androidx.recyclerview:recyclerview: 1.1.0",
+        "com.google.android.material:material:1.2.1"
+      ]
+    }
+  }
+}

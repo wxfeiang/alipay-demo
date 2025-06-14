@@ -1,0 +1,7 @@
+src/uni_modules/
+src/components/dy-barcode/
+src/components/dy-qrcode/
+src/components/vk-data-goods-sku-popup/*
+src/components/vk-data-input-number-box/*
+src/pages-sub/shopManager/components/lime-painter/
+src/pages-sub/marketManager/components/lime-painter/

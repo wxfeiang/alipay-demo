@@ -1,0 +1,115 @@
+{
+  "globalStyle": {
+    "navigationStyle": "default",
+    "navigationBarTitleText": "雄安一卡通",
+    "allowsBounceVertical": "NO",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue",
+      "^(?!z-paging-refresh|z-paging-load-more)z-paging(.*)": "z-paging/components/z-paging$1/z-paging$1.vue",
+      "^dy-(.*)": "components/dy-$1/dy-$1.vue"
+    }
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#3177f6",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "height": "50px",
+    "fontSize": "10px",
+    "iconWidth": "24px",
+    "spacing": "3px",
+    "list": [
+      {
+        "iconPath": "static/tabbar2/index.png",
+        "selectedIconPath": "static/tabbar2/index-a.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "static/tabbar2/fuwu.png",
+        "selectedIconPath": "static/tabbar2/fuwu-a.png",
+        "pagePath": "pages/login/index",
+        "text": "登录"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "type": "home",
+      "layout": "default",
+      "needLogin": true,
+      "style": {
+        "navigationStyle": "custom",
+        "mp-alipay": {
+          "transparentTitle": "always",
+          "defaultTitle": "",
+          "titlePenetrate": "NO",
+          "backButtonIcon": null
+        }
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "type": "page",
+      "layout": "default",
+      "needLogin": true,
+      "style": {
+        "navigationStyle": "custom",
+        "mp-alipay": {
+          "transparentTitle": "always",
+          "titlePenetrate": "NO",
+          "defaultTitle": ""
+        }
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages-sub/serveMain",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/serveMassage",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/webView",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/system",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/userManager",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/marketManager",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/shopManager",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/order",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/homeManager",
+      "pages": []
+    },
+    {
+      "root": "pages-sub/promotionCenter",
+      "pages": []
+    }
+  ]
+}

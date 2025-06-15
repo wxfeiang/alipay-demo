@@ -42,22 +42,6 @@ export default defineManifestConfig({
       autoclose: true,
       delay: 0,
     },
-    nativePlugins: {
-      'test-plugin': {
-        __plugin_info__: {
-          name: '数字身份插件',
-          description: '安卓原生插件',
-          platforms: 'Android',
-          url: '',
-          android_package_name: 'com.xionganbc.ykt',
-          ios_bundle_id: '',
-          isCloud: false,
-          bought: -1,
-          pid: '',
-          parameters: {},
-        },
-      },
-    },
     /* 模块配置 */
     modules: {
       Barcode: {},
